@@ -6,8 +6,8 @@ SocksPort 0.0.0.0:9150
 
 ## Entry policies to allow/deny SOCKS requests based on IP address.
 ## SocksPolicy accept 192.168.1.0/24
-SocksPolicy accept 172.17.0.0/16
-SocksPolicy reject *
+##SocksPolicy accept 172.17.0.0/16
+##SocksPolicy reject *
 
 ## Logs go to stdout at level "notice"
 Log notice stdout
@@ -22,3 +22,5 @@ KeepalivePeriod 60
 NewCircuitPeriod 15                                                                                                                       
 # How many entry guards should we keep at a time?                                                                                           
 NumEntryGuards 8  
+#Feel free to reuse a circuit that was first used at most NUM seconds ago, but never attach a new stream to a circuit that is too old. For hidden services, this applies to the last time a circuit was used, not the first. Circuits with streams constructed with SOCKS authentication via SocksPorts that have KeepAliveIsolateSOCKSAuth ignore this value. (Default: 10 minutes)
+MaxCircuitDirtiness 10
