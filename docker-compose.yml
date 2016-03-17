@@ -1,0 +1,40 @@
+tor1:
+    build: ./tor
+    ports:
+     - "2000:9150"
+tor2:
+    build: ./tor
+    ports:
+     - "2001:9150"
+tor3:
+    build: ./tor
+    ports:
+     - "2002:9150"
+tor4:
+    build: ./tor
+    ports:
+     - "2003:9150"
+tor5:
+    build: ./tor
+    ports:
+     - "2004:9150"
+tor6:
+    build: ./tor
+    ports:
+     - "2005:9150"
+tor7:
+    build: ./tor
+    ports:
+     - "2006:9150"
+tor8:
+    build: ./tor
+    ports:
+     - "2007:9150"
+tor9:
+    build: ./tor
+    ports:
+     - "2008:9150"
+tor10:
+    build: ./tor
+    ports:
+     - "2009:9150"
